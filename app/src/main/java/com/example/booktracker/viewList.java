@@ -67,32 +67,35 @@ public class viewList extends AppCompatActivity {
                     Toast.makeText(viewList.this, "Enter a title.", Toast.LENGTH_SHORT).show();
                     inputTitle.setError( "Title is required!" );
                 }
-                String pages = inputPages.getText().toString().trim();
-                String genreTitle = inputGenre.getText().toString().trim();
-                String author = inputAuthor.getText().toString().trim();
-                double numStars = mBar.getRating();
+                else {
+                    String pages = inputPages.getText().toString().trim();
+                    String genreTitle = inputGenre.getText().toString().trim();
+                    String author = inputAuthor.getText().toString().trim();
+                    double numStars = mBar.getRating();
 
-                userID = fAuth.getCurrentUser().getUid();
-                String spinnerText = s.getSelectedItem().toString();
-                DocumentReference documentReference = fStore.collection("users").document(userID).collection(spinnerText).document(bookTitle);
-                Map<String, Object> book = new HashMap<>();
-                book.put("Title", bookTitle);
-                book.put("Author", author);
-                book.put("Genre", genreTitle);
-                book.put("Pages", pages);
-                book.put("Rating", numStars);
-                SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
-                Date date = new Date();
-                Date newDate = new Date(date.getTime());
-                String stringdate = dt.format(newDate);
-                book.put("Date", stringdate);
-                documentReference.set(book);
-                inputTitle.setText("");
-                inputPages.setText("");
-                inputGenre.setText("");
-                inputAuthor.setText("");
-                mBar.setRating(0);
-                Toast.makeText(viewList.this, "Book Successfully Created!!!", Toast.LENGTH_SHORT).show();
+                    userID = fAuth.getCurrentUser().getUid();
+                    String spinnerText = s.getSelectedItem().toString();
+                    DocumentReference documentReference = fStore.collection("users").document(userID).collection(spinnerText).document(bookTitle);
+                    Map<String, Object> book = new HashMap<>();
+                    book.put("Title", bookTitle);
+                    book.put("Author", author);
+                    book.put("Genre", genreTitle);
+                    book.put("Pages", pages);
+                    book.put("Rating", numStars);
+                    SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
+                    Date date = new Date();
+                    Date newDate = new Date(date.getTime());
+                    String stringdate = dt.format(newDate);
+                    book.put("Date", stringdate);
+                    documentReference.set(book);
+                    inputTitle.setText("");
+                    inputPages.setText("");
+                    inputGenre.setText("");
+                    inputAuthor.setText("");
+                    mBar.setRating(0);
+                    Toast.makeText(viewList.this, "Book Successfully Created!!!", Toast.LENGTH_SHORT).show();
+                }
+
 
             }
         });

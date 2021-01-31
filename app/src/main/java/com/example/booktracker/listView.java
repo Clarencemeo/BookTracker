@@ -104,12 +104,7 @@ public class listView extends AppCompatActivity {
                         mAdapter.setOnItemClickListener(new ExampleAdapter.OnItemClickListener() {
                             @Override
                             public void onItemClick(int position) {
-                                //Get the title of the book at the position (get mText1)
-                                //Pass in the title of the document (aka book) into the edit activity
-                                //The title of the document will be used to reference the document
-                                //The other activity will delete the document under the passed title, and create a new
-                                generatedList.get(position).changeText1("Clicked");
-                                mAdapter.notifyItemChanged(position);
+                                return;
                             }
 
                             @Override
