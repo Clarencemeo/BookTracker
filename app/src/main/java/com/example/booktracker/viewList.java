@@ -93,7 +93,7 @@ public class viewList extends AppCompatActivity {
                     inputGenre.setText("");
                     inputAuthor.setText("");
                     mBar.setRating(0);
-                    Toast.makeText(viewList.this, "Book Successfully Created!!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(viewList.this, "Book Successfully Added!", Toast.LENGTH_SHORT).show();
                 }
 
 
