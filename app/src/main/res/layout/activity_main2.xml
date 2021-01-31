@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fcd5ce"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/viewList"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:drawableLeft="@android:drawable/ic_menu_sort_by_size"
+        android:text="View Book List"
+        app:backgroundTint="#E5989B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddBook"
+        app:layout_constraintVertical_bias="0.205" />
+
+    <Button
+        android:id="@+id/statisticsButton"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:drawableLeft="?android:attr/actionModeFindDrawable"
+        android:text="Statistics"
+        app:backgroundTint="#E5989B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddBook"
+        app:layout_constraintVertical_bias="0.531" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="170dp"
+        android:layout_height="46dp"
+        android:fontFamily="@font/acme"
+        android:text="Book Tracker"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/AddBook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="120dp"
+        android:layout_height="44dp"
+        android:drawableLeft="@drawable/logout"
+        android:text="Log Out"
+        app:backgroundTint="#E5989B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statisticsButton"
+        app:layout_constraintVertical_bias="0.723" />
+
+    <Button
+        android:id="@+id/AddBook"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:drawableLeft="@android:drawable/ic_menu_edit"
+        android:text="Add Books"
+        app:backgroundTint="#E5989B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.323" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="58dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/AddBook"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075"
+        app:srcCompat="@drawable/accountbox" />
+
+    <TextView
+        android:id="@+id/displayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/title2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.369" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
