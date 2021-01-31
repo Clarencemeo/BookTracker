@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -62,6 +63,10 @@ public class viewList extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String bookTitle = inputTitle.getText().toString().trim();
+                if( TextUtils.isEmpty(bookTitle)) {
+                    Toast.makeText(viewList.this, "Enter a title.", Toast.LENGTH_SHORT).show();
+                    inputTitle.setError( "Title is required!" );
+                }
                 String pages = inputPages.getText().toString().trim();
                 String genreTitle = inputGenre.getText().toString().trim();
                 String author = inputAuthor.getText().toString().trim();
@@ -82,6 +87,11 @@ public class viewList extends AppCompatActivity {
                 String stringdate = dt.format(newDate);
                 book.put("Date", stringdate);
                 documentReference.set(book);
+                inputTitle.setText("");
+                inputPages.setText("");
+                inputGenre.setText("");
+                inputAuthor.setText("");
+                mBar.setRating(0);
                 Toast.makeText(viewList.this, "Book Successfully Created!!!", Toast.LENGTH_SHORT).show();
 
             }
