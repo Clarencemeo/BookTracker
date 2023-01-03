@@ -2,6 +2,13 @@
 ## Created by Clarence Ortega
 An app that allows users to keep track of books that they have read or plan to read.\
 Users can sort their lists and view statistics as well!
+### Features
+![image](https://user-images.githubusercontent.com/77476725/210345555-0a86b47d-74d3-47f9-a41f-90ba0a052789.png) ![image](https://user-images.githubusercontent.com/77476725/210345614-c390c9f7-27d8-4936-a0d3-b43a6e9116ee.png)
+![image](https://user-images.githubusercontent.com/77476725/210345649-f8024afd-0e0d-4ac5-92c0-65d3002c1e11.png)
+![image](https://user-images.githubusercontent.com/77476725/210345684-d76faf45-073a-4001-adb8-2725b9b22738.png)
+![image](https://user-images.githubusercontent.com/77476725/210345704-9d2de5da-fcf0-43e7-8ac9-acdb29543fa8.png)
+
+
 ### How to Use
 After downloading and launching the app, you will be greeted with the registration page.\
 You can make an account here, but you can't use the same email as someone else.\
